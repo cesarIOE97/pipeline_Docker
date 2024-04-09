@@ -44,5 +44,6 @@ jobs:
       with:
         image: cesaroe97/projects
         registry: docker.io
+        tags: v1
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}

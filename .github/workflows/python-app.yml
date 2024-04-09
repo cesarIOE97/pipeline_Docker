@@ -10,7 +10,7 @@ permissions:
   contents: read
 
 jobs:
-  build:
+  build-python:
 
     runs-on: ${{matrix.os}}
     strategy:
@@ -39,3 +39,10 @@ jobs:
     - name: Run simple code
       run: |
         python -c 'import math; print(math.factorial(5))'
+    - name: Build and Push Docker Image
+      uses: mr-smithers-excellent/docker-build-push@v6
+      with:
+        image: cesaroe97/projects
+        registry: docker.io
+        username: ${{ secrets.DOCKER_USERNAME }}
+        password: ${{ secrets.DOCKER_PASSWORD }}

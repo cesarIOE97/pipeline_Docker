@@ -44,5 +44,5 @@ jobs:
       with:
         image: cesaroe97/projects
         registry: docker.io
-        username: ${{ secrets.DOCKER_USERNAME }}
-        password: ${{ secrets.DOCKER_PASSWORD }}
+        username: cesaroe97
+        password: Ra$ek2016301207
